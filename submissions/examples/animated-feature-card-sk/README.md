@@ -1,0 +1,1 @@
+A SaaS-style feature showcase card with a CSS icon, title, description, and a corner accent gradient. On hover the card lifts with a shadow, the icon scales up, and the corner accent expands. Pure CSS with reduced-motion support.
