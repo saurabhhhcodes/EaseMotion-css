@@ -1,0 +1,1 @@
+An animated data table featuring zebra striping, hover highlight effects, and colored status badges. Built with pure CSS on a dark theme, it provides smooth transitions for row interactions and action buttons. Includes reduced-motion support for accessibility.
