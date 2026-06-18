@@ -1,0 +1,31 @@
+body { min-height: 100vh; display: grid; place-items: center; margin: 0; background: #f8fafc; font-family: system-ui, sans-serif; }
+.price-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(15,23,42,.1);
+  animation: price-in 0.5s ease both;
+}
+.price-tag__old {
+  color: #94a3b8;
+  text-decoration: line-through;
+  font: 600 0.95rem system-ui, sans-serif;
+}
+.price-tag__new {
+  color: #0f172a;
+  font: 800 1.4rem system-ui, sans-serif;
+}
+.price-tag__badge {
+  background: #fef3c7;
+  color: #b45309;
+  padding: 0.2rem 0.45rem;
+  border-radius: 8px;
+  font: 800 0.72rem system-ui, sans-serif;
+}
+@keyframes price-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
