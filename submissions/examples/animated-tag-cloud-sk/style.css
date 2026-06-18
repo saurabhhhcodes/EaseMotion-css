@@ -1,0 +1,192 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --tc-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --tc-bg: #0f172a;
+  --tc-surface: #1e293b;
+  --tc-text: #f1f5f9;
+  --tc-text-muted: #94a3b8;
+  --tc-radius: 100px;
+  --tc-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --tc-glow-size: 0 0 20px;
+}
+
+body {
+  font-family: var(--tc-font-family);
+  background: var(--tc-bg);
+  color: var(--tc-text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+}
+
+.tagcloud {
+  width: 100%;
+  max-width: 800px;
+  animation: tcFadeIn 0.5s ease;
+}
+
+@keyframes tcFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tagcloud__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.tagcloud__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagcloud__subtitle {
+  font-size: 0.9rem;
+  color: var(--tc-text-muted);
+  margin-top: 0.5rem;
+}
+
+.tagcloud__cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+}
+
+.tagcloud__tag {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--tc-radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  cursor: default;
+  transition: transform var(--tc-transition), box-shadow var(--tc-transition);
+}
+
+.tagcloud__tag:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: var(--tc-glow-size) rgba(255, 255, 255, 0.15);
+}
+
+.tagcloud__tag--sm { font-size: 0.8rem; padding: 0.35rem 0.9rem; }
+.tagcloud__tag--md { font-size: 0.95rem; padding: 0.5rem 1.25rem; }
+.tagcloud__tag--lg { font-size: 1.1rem; padding: 0.6rem 1.5rem; }
+.tagcloud__tag--xl { font-size: 1.3rem; padding: 0.75rem 1.75rem; }
+
+.tagcloud__tag--indigo {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+.tagcloud__tag--indigo:hover {
+  box-shadow: 0 0 24px rgba(99, 102, 241, 0.6);
+}
+
+.tagcloud__tag--blue {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+.tagcloud__tag--blue:hover {
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.6);
+}
+
+.tagcloud__tag--pink {
+  background: linear-gradient(135deg, #ec4899, #f472b6);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.3);
+}
+.tagcloud__tag--pink:hover {
+  box-shadow: 0 0 24px rgba(236, 72, 153, 0.6);
+}
+
+.tagcloud__tag--green {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+.tagcloud__tag--green:hover {
+  box-shadow: 0 0 24px rgba(34, 197, 94, 0.6);
+}
+
+.tagcloud__tag--purple {
+  background: linear-gradient(135deg, #a855f7, #c084fc);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.3);
+}
+.tagcloud__tag--purple:hover {
+  box-shadow: 0 0 24px rgba(168, 85, 247, 0.6);
+}
+
+.tagcloud__tag--orange {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+}
+.tagcloud__tag--orange:hover {
+  box-shadow: 0 0 24px rgba(249, 115, 22, 0.6);
+}
+
+.tagcloud__tag--teal {
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+}
+.tagcloud__tag--teal:hover {
+  box-shadow: 0 0 24px rgba(20, 184, 166, 0.6);
+}
+
+.tagcloud__tag--red {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+.tagcloud__tag--red:hover {
+  box-shadow: 0 0 24px rgba(239, 68, 68, 0.6);
+}
+
+.tagcloud__tag--cyan {
+  background: linear-gradient(135deg, #06b6d4, #22d3ee);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+}
+.tagcloud__tag--cyan:hover {
+  box-shadow: 0 0 24px rgba(6, 182, 212, 0.6);
+}
+
+.tagcloud__tag--amber {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
+}
+.tagcloud__tag--amber:hover {
+  box-shadow: 0 0 24px rgba(217, 119, 6, 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tagcloud,
+  .tagcloud__tag {
+    animation: none;
+    transition: none;
+  }
+  .tagcloud__tag:hover {
+    transform: none;
+  }
+}
