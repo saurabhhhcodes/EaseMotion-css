@@ -349,7 +349,7 @@ a.sidebar-group-label:hover {
 }
 
 /* ── Mobile Toggle Button ─────────────────────────────── */
-.sidebar-toggle {
+.docs-sidebar-toggle {
   display: none;
   background: none;
   border: none;
@@ -721,7 +721,7 @@ a.sidebar-group-label:hover {
 
 /* ── Mobile (≤ 768px) ─────────────────────────────────── */
 @media (max-width: 768px) {
-  .sidebar-toggle {
+  .docs-sidebar-toggle {
     display: block;
   }
 
