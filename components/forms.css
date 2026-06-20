@@ -145,6 +145,20 @@
     opacity: 0.8;
   }
 
+  /* Readonly State */
+  .ease-input[readonly],
+  .ease-input:read-only,
+  .ease-textarea[readonly],
+  .ease-textarea:read-only,
+  .ease-select[readonly],
+  .ease-select:read-only {
+    background-color: var(--ease-color-neutral-50, #f8fafc);
+    color: var(--ease-color-text, #1e293b);
+    border-color: var(--ease-color-neutral-200, #e2e8f0);
+    cursor: text;
+    opacity: 0.95;
+  }
+
   /* Dark mode overrides for custom SVGs / colors */
   @media (prefers-color-scheme: dark) {
     .ease-input,
@@ -159,6 +173,17 @@
     .ease-select:disabled {
       background-color: var(--ease-color-neutral-800, #1e293b);
       border-color: var(--ease-color-neutral-700, #334155);
+    }
+
+    .ease-input[readonly],
+    .ease-input:read-only,
+    .ease-textarea[readonly],
+    .ease-textarea:read-only,
+    .ease-select[readonly],
+    .ease-select:read-only {
+      background-color: var(--ease-color-neutral-900, #0f172a);
+      border-color: var(--ease-color-neutral-700, #334155);
+      color: var(--ease-color-neutral-200, #e2e8f0);
     }
 
     .ease-select {
